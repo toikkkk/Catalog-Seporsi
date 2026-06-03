@@ -375,7 +375,7 @@
 
   <!-- Checkout Modal -->
   <div class="fixed inset-0 bg-on-surface/50 z-[100] hidden flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0" id="checkoutModal">
-    <div class="bg-surface rounded-xl p-md max-w-md w-full mx-margin-mobile md:mx-0 tactile-border transform scale-95 transition-transform duration-300" id="checkoutModalContent">
+    <div class="bg-surface rounded-xl p-md max-w-md w-full mx-margin-mobile md:mx-0 tactile-border transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]" id="checkoutModalContent">
       <div class="flex justify-between items-center mb-md pb-sm border-b-2 border-surface-variant">
         <h3 class="text-title-md font-title-md text-on-surface">Detail Pesanan</h3>
         <button class="text-on-surface-variant hover:text-primary transition-colors" id="closeModal">
@@ -402,6 +402,68 @@
         <span class="text-title-md font-title-md text-on-surface">Total:</span>
         <span class="text-title-md font-title-md text-primary" id="modalTotalPrice">Rp 0</span>
       </div>
+      <!-- Metode Pembayaran -->
+      <div class="border-t-2 border-surface-variant pt-sm mb-md">
+        <p class="text-label-md font-label-md text-on-surface-variant mb-sm">Metode Pembayaran:</p>
+
+        <!-- QRIS -->
+        <div class="mb-sm">
+          <button type="button" class="payment-btn w-full flex items-center gap-sm bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors text-left" data-method="QRIS">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+            <span class="text-body-md font-body-md text-on-surface flex-1">QRIS</span>
+            <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:18px;">check_circle</span>
+          </button>
+        </div>
+
+        <!-- Transfer Bank -->
+        <div class="mb-sm">
+          <p class="text-label-md font-label-md text-on-surface mb-xs flex items-center gap-xs">
+            <span class="material-symbols-outlined text-[16px]">account_balance</span>Transfer Bank
+          </p>
+          <div class="grid grid-cols-2 gap-xs">
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank BCA">
+              <span class="text-label-md font-label-md text-on-surface">BCA</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank Mandiri">
+              <span class="text-label-md font-label-md text-on-surface">Mandiri</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank BNI">
+              <span class="text-label-md font-label-md text-on-surface">BNI</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank BRI">
+              <span class="text-label-md font-label-md text-on-surface">BRI</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- E-Wallet -->
+        <div>
+          <p class="text-label-md font-label-md text-on-surface mb-xs flex items-center gap-xs">
+            <span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>E-Wallet
+          </p>
+          <div class="grid grid-cols-3 gap-xs">
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="ShopeePay">
+              <span class="text-label-md font-label-md text-on-surface">ShopeePay</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="DANA">
+              <span class="text-label-md font-label-md text-on-surface">DANA</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="GoPay">
+              <span class="text-label-md font-label-md text-on-surface">GoPay</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="text-body-md text-error hidden mt-xs" id="paymentValidationMsg">Pilih metode pembayaran terlebih dahulu.</p>
+      </div>
+
       <div class="border-t-2 border-surface-variant pt-sm mb-md space-y-sm">
         <p class="text-label-md font-label-md text-on-surface-variant">Lengkapi data pengiriman:</p>
         <div>
