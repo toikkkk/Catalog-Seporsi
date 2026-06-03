@@ -80,6 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentQty = 1;
         updateModal();
 
+        document.getElementById('buyerName').value = '';
+        document.getElementById('buyerLocation').value = '';
+        document.getElementById('validationMsg').classList.add('hidden');
+
         modal.classList.remove('hidden');
         setTimeout(() => {
             modal.classList.remove('opacity-0');
@@ -116,10 +120,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     waCheckoutBtn.addEventListener('click', () => {
+        const name = document.getElementById('buyerName').value.trim();
+        const location = document.getElementById('buyerLocation').value.trim();
+        const validationMsg = document.getElementById('validationMsg');
+
+        if (!name || !location) {
+            validationMsg.classList.remove('hidden');
+            return;
+        }
+        validationMsg.classList.add('hidden');
+
         const total = currentPrice * currentQty;
-        const message = `Halo Seporsi, saya ingin memesan:\n\nProduk: ${currentProduct}\nJumlah: ${currentQty} pack\nTotal Harga: ${formatRupiah(total)}\n\nMohon info untuk pembayarannya. Terima kasih!`;
-        // Ganti dengan nomor WhatsApp yang sebenarnya
-        const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+        const message =
+`Halo Seporsi, saya ingin memesan:
+
+Produk  : ${currentProduct}
+Jumlah  : ${currentQty} pack
+Total   : ${formatRupiah(total)}
+
+---
+Nama    : ${name}
+Lokasi  : ${location}
+
+Mohon info untuk pembayarannya. Terima kasih!`;
+
+        const waUrl = `https://wa.me/6281249473536?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
         closeCheckoutModal();
     });
