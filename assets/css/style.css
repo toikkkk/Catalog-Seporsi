@@ -20,10 +20,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.8s ease-in-out;
+    transition: transform 1.2s cubic-bezier(0.76, 0, 0.24, 1), opacity 1.2s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .intro-overlay.fade-out {
+    transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
 }
@@ -34,13 +35,19 @@
     align-items: center;
     gap: 0px;
     opacity: 0;
-    transform: scale(0.8);
-    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: scale(0.7) translateY(40px);
+    transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1.2s ease-out;
 }
 
 .intro-content.animate {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateY(0);
+}
+
+.intro-content.exit {
+    opacity: 0;
+    transform: scale(0.5) translateY(-120px);
+    transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .intro-logo {

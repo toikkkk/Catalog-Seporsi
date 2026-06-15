@@ -10,9 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
             content.classList.add("animate");
         }, 100);
 
+        // Logo exit flight: shrink and move up
+        setTimeout(() => {
+            content.classList.add("exit");
+        }, 2100);
+
+        // Overlay slide up reveal transition
         setTimeout(() => {
             overlay.classList.add("fade-out");
 
+            // Page content starts rising and fading in
             setTimeout(() => {
                 mainReveals.forEach(el => el.classList.add("visible"));
                 reveals.forEach((el, index) => {
@@ -20,12 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         el.classList.add("visible");
                     }, index * 100);
                 });
-            }, 300);
-        }, 2600);
+            }, 200);
+        }, 2300);
 
+        // Remove overlay once transition completes
         setTimeout(() => {
             overlay.remove();
-        }, 3500);
+        }, 3800);
     } else {
         mainReveals.forEach(el => el.classList.add("visible"));
         reveals.forEach(el => el.classList.add("visible"));
