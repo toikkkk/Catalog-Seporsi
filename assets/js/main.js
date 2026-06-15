@@ -73,7 +73,26 @@ document.addEventListener("DOMContentLoaded", () => {
         modalProductName.textContent = currentProduct;
         modalProductPrice.textContent = formatRupiah(currentPrice);
         qtyValue.textContent = currentQty;
-        modalTotalPrice.textContent = formatRupiah(currentPrice * currentQty);
+
+        const originalTotal = currentPrice * currentQty;
+        const hasDiscount = currentQty >= 2;
+        const discountPercent = 0.05;
+        const discountAmount = hasDiscount ? Math.round(originalTotal * discountPercent) : 0;
+        const finalTotal = originalTotal - discountAmount;
+
+        const originalPriceEl = document.getElementById('modalOriginalPrice');
+        const discountLabelEl = document.getElementById('modalDiscountLabel');
+
+        if (hasDiscount) {
+            originalPriceEl.textContent = formatRupiah(originalTotal);
+            originalPriceEl.classList.remove('hidden');
+            discountLabelEl.classList.remove('hidden');
+        } else {
+            originalPriceEl.classList.add('hidden');
+            discountLabelEl.classList.add('hidden');
+        }
+
+        modalTotalPrice.textContent = formatRupiah(finalTotal);
     };
 
     const resetPaymentBtns = () => {
@@ -168,12 +187,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!valid) return;
 
-        const total = currentPrice * currentQty;
+        const originalTotal = currentPrice * currentQty;
+        const hasDiscount = currentQty >= 2;
+        const discountPercent = 0.05;
+        const discountAmount = hasDiscount ? Math.round(originalTotal * discountPercent) : 0;
+        const total = originalTotal - discountAmount;
+
+        let discountText = '';
+        if (hasDiscount) {
+            discountText = `\nDiskon (5%)    : -${formatRupiah(discountAmount)} (Promo Beli 2+)`;
+        }
+
         const message =
 `Halo Seporsi, saya ingin memesan:
 
 Produk          : ${currentProduct}
 Jumlah          : ${currentQty} pack
+Subtotal        : ${formatRupiah(originalTotal)}${discountText}
 Total           : ${formatRupiah(total)}
 Metode Bayar    : ${currentPayment}
 

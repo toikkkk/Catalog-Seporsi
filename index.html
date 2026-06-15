@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Seporsi - Catalog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Literata:wght@600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Literata:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -100,26 +105,30 @@
       },
     }
   </script>
-  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet" />
 </head>
+
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
 
   <!-- Background Grid -->
-  <div class="fixed inset-0 -z-10 w-full h-full pointer-events-none" style="background-image: linear-gradient(to right, rgba(207, 62, 38, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(207, 62, 38, 0.1) 1px, transparent 1px); background-size: 24px 24px; -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 100%); mask-image: radial-gradient(circle at center, black 0%, transparent 100%);"></div>
+  <div class="fixed inset-0 -z-10 w-full h-full pointer-events-none"
+    style="background-image: linear-gradient(to right, rgba(207, 62, 38, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(207, 62, 38, 0.1) 1px, transparent 1px); background-size: 24px 24px; -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 100%); mask-image: radial-gradient(circle at center, black 0%, transparent 100%);">
+  </div>
 
   <!-- Intro Overlay -->
   <div class="intro-overlay" id="introOverlay">
     <div class="intro-content" id="introContent">
-      <img alt="Seporsi Logo" class="intro-logo" src="assets/images/IMG_1214.PNG"/>
+      <img alt="Seporsi Logo" class="intro-logo" src="assets/images/logo.webp" />
       <div class="intro-text">Seporsi</div>
     </div>
   </div>
 
   <!-- Top Navigation -->
   <header class="bg-surface text-primary docked full-width top-0 sticky z-50 main-content-reveal">
-    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto border-b-2 border-surface-variant">
+    <nav
+      class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto border-b-2 border-surface-variant">
       <div class="text-title-md font-title-md text-primary flex items-center gap-sm">
-        <img alt="Seporsi Mini Logo" class="w-10 h-10 rounded-full" src="assets/images/IMG_1214.PNG"/>
+        <img alt="Seporsi Mini Logo" class="w-10 h-10 rounded-full" src="assets/images/logo.webp" />
         Seporsi
       </div>
     </nav>
@@ -133,15 +142,19 @@
       <div class="flex-1 space-y-md flex flex-col items-center text-center">
         <h1 class="text-display-lg font-display-lg text-primary">Dekatkan Rumah Lewat Seporsi</h1>
         <p class="text-body-lg font-body-lg text-on-surface-variant max-w-lg">
-          Cita rasa masakan rumahan yang nyaman, hangat, dan siap menemani kesibukanmu. Nikmati sajian praktis dengan bumbu pilihan.
+          Cita rasa masakan rumahan yang nyaman, hangat, dan siap menemani kesibukanmu. Nikmati sajian praktis dengan
+          bumbu pilihan.
         </p>
         <div class="flex gap-sm">
-          <span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-sm text-label-md font-label-md tactile-border inline-flex items-center gap-xs animate-reveal">
+          <span
+            class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-sm text-label-md font-label-md tactile-border inline-flex items-center gap-xs animate-reveal">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
             Tanpa Pengawet
           </span>
-          <span class="bg-tertiary-container text-on-tertiary-container px-sm py-xs rounded-sm text-label-md font-label-md tactile-border inline-flex items-center gap-xs animate-reveal">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+          <span
+            class="bg-tertiary-container text-on-tertiary-container px-sm py-xs rounded-sm text-label-md font-label-md tactile-border inline-flex items-center gap-xs animate-reveal">
+            <span class="material-symbols-outlined"
+              style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
             Pedas Pas
           </span>
         </div>
@@ -158,10 +171,23 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
 
         <!-- Product Card 1: Ayam Daun Jeruk -->
-        <article class="bg-surface-container-lowest rounded-xl p-sm tactile-border tactile-hover transition-transform duration-200 flex flex-col group relative overflow-hidden">
-          <div class="absolute inset-0 bg-surface-container-low opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
-          <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-sm tactile-border bg-surface-container">
-            <img alt="Ayam Daun Jeruk" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="assets/images/ayam-fix.jpg" loading="lazy"/>
+        <article
+          class="bg-surface-container-lowest rounded-xl p-sm tactile-border tactile-hover transition-transform duration-200 flex flex-col group relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-surface-container-low opacity-0 group-hover:opacity-100 transition-opacity -z-10">
+          </div>
+          <div
+            class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-sm tactile-border bg-surface-container">
+            <!-- Discount Tag -->
+            <div
+              class="absolute top-sm left-sm z-10 bg-secondary-container text-on-secondary-container px-sm py-xs rounded-sm text-label-md font-label-md tactile-border -rotate-3 flex items-center gap-xs">
+              <span class="material-symbols-outlined text-[16px] animate-pulse-slow"
+                style="font-variation-settings: 'FILL' 1;">sell</span>
+              Beli 2 Diskon 5%
+            </div>
+            <img alt="Ayam Daun Jeruk"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              src="assets/images/ayam-fix.webp" loading="lazy" />
           </div>
           <div class="flex-1 flex flex-col justify-between">
             <div>
@@ -170,24 +196,39 @@
                   Ayam Daun Jeruk
                   <span class="text-label-md font-label-md text-on-surface-variant block">(90gr/pack)</span>
                 </h3>
-                <span class="text-title-md font-title-md text-primary bg-primary-fixed-dim px-sm py-xs rounded-sm tactile-border -rotate-2">Rp 25.000</span>
+                <span
+                  class="text-title-md font-title-md text-primary bg-primary-fixed-dim px-sm py-xs rounded-sm tactile-border -rotate-2">Rp
+                  25.000</span>
               </div>
-              <p class="text-body-md font-body-md text-on-surface-variant mb-md">Ayam berbumbu rempah dengan irisan daun jeruk yang menghadirkan hangatnya masakan rumah.</p>
+              <p class="text-body-md font-body-md text-on-surface-variant mb-md">Ayam berbumbu rempah dengan irisan daun
+                jeruk yang menghadirkan hangatnya masakan rumah.</p>
             </div>
             <button
               class="tambah-btn w-full bg-primary text-on-primary py-sm rounded-lg text-label-md font-label-md tactile-border tactile-hover flex items-center justify-center gap-sm"
-              data-name="Ayam Daun Jeruk"
-              data-price="25000">
+              data-name="Ayam Daun Jeruk" data-price="25000">
               <span class="material-symbols-outlined">add_shopping_cart</span>Pesan
             </button>
           </div>
         </article>
 
         <!-- Product Card 2: Ikan Tongkol Suwir Balado -->
-        <article class="bg-surface-container-lowest rounded-xl p-sm tactile-border tactile-hover transition-transform duration-200 flex flex-col group relative overflow-hidden">
-          <div class="absolute inset-0 bg-surface-container-low opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
-          <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-sm tactile-border bg-surface-container">
-            <img alt="Ikan Tongkol Suwir Balado" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="assets/images/ikan-fix.jpg" loading="lazy"/>
+        <article
+          class="bg-surface-container-lowest rounded-xl p-sm tactile-border tactile-hover transition-transform duration-200 flex flex-col group relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-surface-container-low opacity-0 group-hover:opacity-100 transition-opacity -z-10">
+          </div>
+          <div
+            class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-sm tactile-border bg-surface-container">
+            <!-- Discount Tag -->
+            <div
+              class="absolute top-sm left-sm z-10 bg-secondary-container text-on-secondary-container px-sm py-xs rounded-sm text-label-md font-label-md tactile-border -rotate-3 flex items-center gap-xs">
+              <span class="material-symbols-outlined text-[16px] animate-pulse-slow"
+                style="font-variation-settings: 'FILL' 1;">sell</span>
+              Beli 2 Diskon 5%
+            </div>
+            <img alt="Ikan Tongkol Suwir Balado"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              src="assets/images/ikan-fix.webp" loading="lazy" />
           </div>
           <div class="flex-1 flex flex-col justify-between">
             <div>
@@ -196,15 +237,17 @@
                   Ikan Tongkol Suwir Balado
                   <span class="text-label-md font-label-md text-on-surface-variant block">(80gr/pack)</span>
                 </h3>
-                <span class="text-title-md font-title-md text-primary bg-primary-fixed-dim px-sm py-xs rounded-sm tactile-border rotate-2">Rp 25.000</span>
+                <span
+                  class="text-title-md font-title-md text-primary bg-primary-fixed-dim px-sm py-xs rounded-sm tactile-border rotate-2">Rp
+                  25.000</span>
               </div>
-              <p class="text-body-md font-body-md text-on-surface-variant mb-md">Tongkol suwir balado dengan cita rasa rumahan yang sederhana dan selalu dirindukan.
+              <p class="text-body-md font-body-md text-on-surface-variant mb-md">Tongkol suwir balado dengan cita rasa
+                rumahan yang sederhana dan selalu dirindukan.
               </p>
             </div>
             <button
               class="tambah-btn w-full bg-primary text-on-primary py-sm rounded-lg text-label-md font-label-md tactile-border tactile-hover flex items-center justify-center gap-sm"
-              data-name="Ikan Tongkol Suwir Balado"
-              data-price="25000">
+              data-name="Ikan Tongkol Suwir Balado" data-price="25000">
               <span class="material-symbols-outlined">add_shopping_cart</span>Pesan
             </button>
           </div>
@@ -227,10 +270,12 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-lg">
 
         <!-- Microwave -->
-        <div class="animate-reveal bg-surface-container-lowest rounded-xl p-md tactile-border flex flex-col gap-sm" style="transition-delay: 200ms;">
+        <div class="animate-reveal bg-surface-container-lowest rounded-xl p-md tactile-border flex flex-col gap-sm"
+          style="transition-delay: 200ms;">
           <div class="flex items-center gap-sm mb-xs">
             <span class="bg-primary text-on-primary rounded-lg p-xs tactile-border">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size:28px;">microwave</span>
+              <span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1; font-size:28px;">microwave</span>
             </span>
             <h3 class="text-title-md font-title-md text-on-surface">Microwave</h3>
           </div>
@@ -261,16 +306,19 @@
             </li>
           </ol>
           <div class="mt-auto pt-sm border-t-2 border-surface-variant flex items-center gap-xs">
-            <span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">timer</span>
+            <span class="material-symbols-outlined text-tertiary text-[16px]"
+              style="font-variation-settings: 'FILL' 1;">timer</span>
             <span class="text-label-md font-label-md text-tertiary">2–3 menit</span>
           </div>
         </div>
 
         <!-- Teflon / Wajan -->
-        <div class="animate-reveal bg-surface-container-lowest rounded-xl p-md tactile-border flex flex-col gap-sm" style="transition-delay: 300ms;">
+        <div class="animate-reveal bg-surface-container-lowest rounded-xl p-md tactile-border flex flex-col gap-sm"
+          style="transition-delay: 300ms;">
           <div class="flex items-center gap-sm mb-xs">
             <span class="bg-secondary text-on-secondary rounded-lg p-xs tactile-border">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size:28px;">local_fire_department</span>
+              <span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1; font-size:28px;">local_fire_department</span>
             </span>
             <h3 class="text-title-md font-title-md text-on-surface">Teflon / Wajan</h3>
           </div>
@@ -297,16 +345,19 @@
             </li>
           </ol>
           <div class="mt-auto pt-sm border-t-2 border-surface-variant flex items-center gap-xs">
-            <span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">timer</span>
+            <span class="material-symbols-outlined text-tertiary text-[16px]"
+              style="font-variation-settings: 'FILL' 1;">timer</span>
             <span class="text-label-md font-label-md text-tertiary">3–5 menit</span>
           </div>
         </div>
 
         <!-- Steamer / Kukusan -->
-        <div class="animate-reveal bg-surface-container-lowest rounded-xl p-md tactile-border flex flex-col gap-sm" style="transition-delay: 400ms;">
+        <div class="animate-reveal bg-surface-container-lowest rounded-xl p-md tactile-border flex flex-col gap-sm"
+          style="transition-delay: 400ms;">
           <div class="flex items-center gap-sm mb-xs">
             <span class="bg-tertiary text-on-tertiary rounded-lg p-xs tactile-border">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size:28px;">water_drop</span>
+              <span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1; font-size:28px;">water_drop</span>
             </span>
             <h3 class="text-title-md font-title-md text-on-surface">Steamer / Kukusan</h3>
           </div>
@@ -325,7 +376,8 @@
             </li>
           </ol>
           <div class="mt-auto pt-sm border-t-2 border-surface-variant flex items-center gap-xs">
-            <span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">timer</span>
+            <span class="material-symbols-outlined text-tertiary text-[16px]"
+              style="font-variation-settings: 'FILL' 1;">timer</span>
             <span class="text-label-md font-label-md text-tertiary">10–15 menit</span>
           </div>
         </div>
@@ -333,21 +385,28 @@
       </div>
 
       <!-- Cara Penyimpanan Banner -->
-      <div class="animate-reveal bg-primary-fixed rounded-xl p-md tactile-border flex flex-col md:flex-row items-start md:items-center gap-md" style="transition-delay: 500ms;">
+      <div
+        class="animate-reveal bg-primary-fixed rounded-xl p-md tactile-border flex flex-col md:flex-row items-start md:items-center gap-md"
+        style="transition-delay: 500ms;">
         <div class="flex items-center gap-sm shrink-0">
           <span class="bg-primary text-on-primary rounded-lg p-xs tactile-border">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size:32px;">ac_unit</span>
+            <span class="material-symbols-outlined"
+              style="font-variation-settings: 'FILL' 1; font-size:32px;">ac_unit</span>
           </span>
           <h3 class="text-title-md font-title-md text-on-surface">Cara Penyimpanan</h3>
         </div>
         <div class="flex flex-col sm:flex-row gap-sm flex-1">
           <div class="flex items-start gap-xs bg-surface-container-lowest rounded-lg p-sm tactile-border flex-1">
-            <span class="material-symbols-outlined text-error shrink-0" style="font-variation-settings: 'FILL' 1;">close</span>
-            <p class="text-body-md font-body-md text-on-surface">Produk yang sudah dicairkan <strong>jangan dibekukan kembali.</strong></p>
+            <span class="material-symbols-outlined text-error shrink-0"
+              style="font-variation-settings: 'FILL' 1;">close</span>
+            <p class="text-body-md font-body-md text-on-surface">Produk yang sudah dicairkan <strong>jangan dibekukan
+                kembali.</strong></p>
           </div>
           <div class="flex items-start gap-xs bg-surface-container-lowest rounded-lg p-sm tactile-border flex-1">
-            <span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <p class="text-body-md font-body-md text-on-surface">Setelah dipanaskan, <strong>segera konsumsi.</strong></p>
+            <span class="material-symbols-outlined text-secondary shrink-0"
+              style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <p class="text-body-md font-body-md text-on-surface">Setelah dipanaskan, <strong>segera konsumsi.</strong>
+            </p>
           </div>
         </div>
       </div>
@@ -357,15 +416,19 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-surface-container-highest text-on-surface full-width mt-xl border-t-2 border-on-surface-variant main-content-reveal">
-    <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-lg max-w-7xl mx-auto gap-md text-body-md font-body-md">
+  <footer
+    class="bg-surface-container-highest text-on-surface full-width mt-xl border-t-2 border-on-surface-variant main-content-reveal">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-lg max-w-7xl mx-auto gap-md text-body-md font-body-md">
       <div class="text-title-md font-title-md text-primary flex items-center gap-sm">
-        <img alt="Seporsi Mini Logo" class="w-8 h-8 rounded-full grayscale opacity-70" src="assets/images/IMG_1214.PNG"/>
+        <img alt="Seporsi Mini Logo" class="w-8 h-8 rounded-full grayscale opacity-70"
+          src="assets/images/logo.webp" />
         Seporsi
       </div>
       <p class="text-body-md font-body-md">© 2026 Seporsi. Dekatkan Rumah Lewat Seporsi.</p>
       <div class="flex gap-md">
-        <a class="text-on-surface-variant hover:text-tertiary transition-colors duration-200 text-label-md font-label-md flex items-center gap-xs" href="#">
+        <a class="text-on-surface-variant hover:text-tertiary transition-colors duration-200 text-label-md font-label-md flex items-center gap-xs"
+          href="#">
           <span class="material-symbols-outlined">chat</span>
           WhatsApp
         </a>
@@ -374,8 +437,12 @@
   </footer>
 
   <!-- Checkout Modal -->
-  <div class="fixed inset-0 bg-on-surface/50 z-[100] hidden flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0" id="checkoutModal">
-    <div class="bg-surface rounded-xl p-md max-w-md w-full mx-margin-mobile md:mx-0 tactile-border transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]" id="checkoutModalContent">
+  <div
+    class="fixed inset-0 bg-on-surface/50 z-[100] hidden flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0"
+    id="checkoutModal">
+    <div
+      class="bg-surface rounded-xl p-md max-w-md w-full mx-margin-mobile md:mx-0 tactile-border transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]"
+      id="checkoutModalContent">
       <div class="flex justify-between items-center mb-md pb-sm border-b-2 border-surface-variant">
         <h3 class="text-title-md font-title-md text-on-surface">Detail Pesanan</h3>
         <button class="text-on-surface-variant hover:text-primary transition-colors" id="closeModal">
@@ -388,11 +455,15 @@
         <div class="flex items-center justify-between">
           <span class="text-label-md font-label-md text-on-surface">Jumlah:</span>
           <div class="flex items-center gap-sm bg-surface-container rounded-lg p-xs tactile-border">
-            <button class="w-8 h-8 flex items-center justify-center bg-surface text-on-surface rounded-md hover:bg-surface-variant transition-colors" id="qtyMinus">
+            <button
+              class="w-8 h-8 flex items-center justify-center bg-surface text-on-surface rounded-md hover:bg-surface-variant transition-colors"
+              id="qtyMinus">
               <span class="material-symbols-outlined text-[18px]">remove</span>
             </button>
             <span class="text-body-md font-bold w-8 text-center" id="qtyValue">1</span>
-            <button class="w-8 h-8 flex items-center justify-center bg-surface text-on-surface rounded-md hover:bg-surface-variant transition-colors" id="qtyPlus">
+            <button
+              class="w-8 h-8 flex items-center justify-center bg-surface text-on-surface rounded-md hover:bg-surface-variant transition-colors"
+              id="qtyPlus">
               <span class="material-symbols-outlined text-[18px]">add</span>
             </button>
           </div>
@@ -400,7 +471,15 @@
       </div>
       <div class="border-t-2 border-surface-variant pt-sm mb-md flex justify-between items-center">
         <span class="text-title-md font-title-md text-on-surface">Total:</span>
-        <span class="text-title-md font-title-md text-primary" id="modalTotalPrice">Rp 0</span>
+        <div class="flex flex-col items-end">
+          <div class="flex items-center gap-xs mb-xs">
+            <span class="text-body-md line-through text-on-surface-variant hidden" id="modalOriginalPrice">Rp 0</span>
+            <span
+              class="bg-secondary-container text-on-secondary-container px-xs py-xs rounded-sm text-[12px] font-bold tactile-border border-[1.5px] border-[#5a413c] hidden"
+              id="modalDiscountLabel">Diskon 5%</span>
+          </div>
+          <span class="text-title-md font-title-md text-primary" id="modalTotalPrice">Rp 0</span>
+        </div>
       </div>
       <!-- Metode Pembayaran -->
       <div class="border-t-2 border-surface-variant pt-sm mb-md">
@@ -408,10 +487,14 @@
 
         <!-- QRIS -->
         <div class="mb-sm">
-          <button type="button" class="payment-btn w-full flex items-center gap-sm bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors text-left" data-method="QRIS">
-            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+          <button type="button"
+            class="payment-btn w-full flex items-center gap-sm bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors text-left"
+            data-method="QRIS">
+            <span class="material-symbols-outlined text-primary"
+              style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
             <span class="text-body-md font-body-md text-on-surface flex-1">QRIS</span>
-            <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:18px;">check_circle</span>
+            <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity"
+              style="font-variation-settings: 'FILL' 1; font-size:18px;">check_circle</span>
           </button>
         </div>
 
@@ -421,21 +504,33 @@
             <span class="material-symbols-outlined text-[16px]">account_balance</span>Transfer Bank
           </p>
           <div class="grid grid-cols-2 gap-xs">
-            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank BCA">
+            <button type="button"
+              class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="Transfer Bank BCA">
               <span class="text-label-md font-label-md text-on-surface">BCA</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
-            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank Mandiri">
+            <button type="button"
+              class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="Transfer Bank Mandiri">
               <span class="text-label-md font-label-md text-on-surface">Mandiri</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
-            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank BNI">
+            <button type="button"
+              class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="Transfer Bank BNI">
               <span class="text-label-md font-label-md text-on-surface">BNI</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
-            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="Transfer Bank BRI">
+            <button type="button"
+              class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="Transfer Bank BRI">
               <span class="text-label-md font-label-md text-on-surface">BRI</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
           </div>
         </div>
@@ -446,22 +541,32 @@
             <span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>E-Wallet
           </p>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-xs">
-            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="ShopeePay">
+            <button type="button"
+              class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="ShopeePay">
               <span class="text-label-md font-label-md text-on-surface truncate">ShopeePay</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity shrink-0" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity shrink-0"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
-            <button type="button" class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="DANA">
+            <button type="button"
+              class="payment-btn flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="DANA">
               <span class="text-label-md font-label-md text-on-surface truncate">DANA</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity shrink-0" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity shrink-0"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
-            <button type="button" class="payment-btn col-span-2 sm:col-span-1 flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors" data-method="GoPay">
+            <button type="button"
+              class="payment-btn col-span-2 sm:col-span-1 flex items-center justify-between gap-xs bg-surface-container border-2 border-outline-variant rounded-lg px-sm py-xs hover:border-primary transition-colors"
+              data-method="GoPay">
               <span class="text-label-md font-label-md text-on-surface truncate">GoPay</span>
-              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity shrink-0" style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
+              <span class="payment-check material-symbols-outlined text-primary opacity-0 transition-opacity shrink-0"
+                style="font-variation-settings: 'FILL' 1; font-size:14px;">check_circle</span>
             </button>
           </div>
         </div>
 
-        <p class="text-body-md text-error hidden mt-xs" id="paymentValidationMsg">Pilih metode pembayaran terlebih dahulu.</p>
+        <p class="text-body-md text-error hidden mt-xs" id="paymentValidationMsg">Pilih metode pembayaran terlebih
+          dahulu.</p>
       </div>
 
       <div class="border-t-2 border-surface-variant pt-sm mb-md space-y-sm">
@@ -470,23 +575,20 @@
           <label class="text-label-md font-label-md text-on-surface mb-xs block" for="buyerName">Nama Pemesan</label>
           <input
             class="w-full bg-surface-container border-2 border-outline-variant focus:border-primary rounded-lg px-sm py-xs text-body-md text-on-surface outline-none transition-colors"
-            id="buyerName"
-            placeholder="Contoh: Budi Santoso"
-            type="text"
-          />
+            id="buyerName" placeholder="Contoh: Budi Santoso" type="text" />
         </div>
         <div>
-          <label class="text-label-md font-label-md text-on-surface mb-xs block" for="buyerLocation">Lokasi / Alamat</label>
+          <label class="text-label-md font-label-md text-on-surface mb-xs block" for="buyerLocation">Lokasi /
+            Alamat</label>
           <textarea
             class="w-full bg-surface-container border-2 border-outline-variant focus:border-primary rounded-lg px-sm py-xs text-body-md text-on-surface outline-none transition-colors resize-none"
-            id="buyerLocation"
-            placeholder="Contoh: Jl. Mawar No. 5, Kos Pak Haji, Malang"
-            rows="2"
-          ></textarea>
+            id="buyerLocation" placeholder="Contoh: Jl. Mawar No. 5, Kos Pak Haji, Malang" rows="2"></textarea>
         </div>
         <p class="text-body-md text-error hidden" id="validationMsg">Nama dan lokasi wajib diisi.</p>
       </div>
-      <button class="w-full bg-primary text-on-primary py-sm rounded-lg text-label-md font-label-md tactile-border tactile-hover flex items-center justify-center gap-sm" id="waCheckoutBtn">
+      <button
+        class="w-full bg-primary text-on-primary py-sm rounded-lg text-label-md font-label-md tactile-border tactile-hover flex items-center justify-center gap-sm"
+        id="waCheckoutBtn">
         <span class="material-symbols-outlined">send</span>
         Pesan Sekarang via WhatsApp
       </button>
@@ -495,4 +597,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
