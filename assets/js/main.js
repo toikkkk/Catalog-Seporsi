@@ -126,23 +126,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Generate Cart HTML
         container.innerHTML = cart.map(item => `
-            <div class="flex items-center justify-between bg-surface-container rounded-lg p-sm tactile-border border-[1.5px] border-[#5a413c] mb-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-surface-container rounded-lg p-sm tactile-border border-[1.5px] border-[#5a413c] mb-sm gap-xs">
                 <div class="flex-1 min-w-0 pr-sm">
                     <p class="text-body-md font-bold text-on-surface truncate">${item.name}</p>
                     <p class="text-label-md text-on-surface-variant">${formatRupiah(item.price)} / pack</p>
                 </div>
-                <div class="flex items-center gap-xs">
+                <div class="flex items-center justify-between sm:justify-end gap-sm w-full sm:w-auto mt-xs sm:mt-0">
                     <div class="flex items-center gap-sm bg-surface rounded-md p-xs border border-[#5a413c]">
-                        <button class="cart-qty-minus w-6 h-6 flex items-center justify-center bg-surface-container rounded-sm hover:bg-surface-variant transition-colors" data-name="${item.name}">
-                            <span class="material-symbols-outlined text-[14px]">remove</span>
+                        <button class="cart-qty-minus w-8 h-8 flex items-center justify-center bg-surface-container rounded-sm hover:bg-surface-variant transition-colors" data-name="${item.name}">
+                            <span class="material-symbols-outlined text-[18px]">remove</span>
                         </button>
-                        <span class="text-label-md font-bold w-6 text-center">${item.qty}</span>
-                        <button class="cart-qty-plus w-6 h-6 flex items-center justify-center bg-surface-container rounded-sm hover:bg-surface-variant transition-colors" data-name="${item.name}">
-                            <span class="material-symbols-outlined text-[14px]">add</span>
+                        <span class="text-label-md font-bold w-8 text-center">${item.qty}</span>
+                        <button class="cart-qty-plus w-8 h-8 flex items-center justify-center bg-surface-container rounded-sm hover:bg-surface-variant transition-colors" data-name="${item.name}">
+                            <span class="material-symbols-outlined text-[18px]">add</span>
                         </button>
                     </div>
-                    <button class="cart-item-remove text-on-surface-variant hover:text-primary p-xs transition-colors" data-name="${item.name}">
-                        <span class="material-symbols-outlined text-[20px]">delete</span>
+                    <button class="cart-item-remove w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" data-name="${item.name}">
+                        <span class="material-symbols-outlined text-[24px]">delete</span>
                     </button>
                 </div>
             </div>
